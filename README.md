@@ -404,28 +404,205 @@ textarea:focus {
     background: #f4b400;
     color: #111;
     border: none;
-    padding: 16px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 100%;
+    padding: 16px 
+    <section id="quote-request" class="quote-section">
+
+    <div class="container">
+
+        <div class="quote-left">
+            <h2>Request an Online Quote</h2>
+
+            <p>
+                Submit your machinery or hydraulic repair request and
+                Larry Mitchell will review it and respond as soon as possible.
+            </p>
+
+            <div class="contact-box">
+                <h3>Direct Contact</h3>
+                <p>📞 678-360-4784</p>
+                <p>✉ qualitylm014@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="quote-form">
+
+            <form
+                action="https://formsubmit.co/qualitylm014@gmail.com"
+                method="POST">
+
+                <input type="hidden" name="_subject"
+                       value="New Quote Request - Quality Machine">
+
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="hidden"
+                       name="_next"
+                       value="https://yourwebsite.com/thank-you.html">
+
+                <div class="row">
+                    <input type="text"
+                           name="Name"
+                           placeholder="Full Name"
+                           required>
+
+                    <input type="tel"
+                           name="Phone"
+                           placeholder="Phone Number"
+                           required>
+                </div>
+
+                <div class="row">
+                    <input type="email"
+                           name="Email"
+                           placeholder="Email Address"
+                           required>
+
+                    <input type="text"
+                           name="Company"
+                           placeholder="Company Name">
+                </div>
+
+                <input type="text"
+                       name="Equipment"
+                       placeholder="Equipment Type">
+
+                <select name="Service" required>
+                    <option value="">
+                        Select Service Needed
+                    </option>
+                    <option>Hydraulic Repair</option>
+                    <option>Machinery Repair</option>
+                    <option>Fabrication & Welding</option>
+                    <option>Preventive Maintenance</option>
+                    <option>Emergency Service</option>
+                </select>
+
+                <textarea
+                    name="Description"
+                    rows="6"
+                    placeholder="Describe the repair or service needed"
+                    required></textarea>
+
+                <button type="submit">
+                    Submit Quote Request
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+.quote-section{
+    background:#111;
+    color:#fff;
+    padding:80px 20px;
 }
 
-.submit-btn:hover {
-    opacity: 0.9;
+.quote-section .container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.3fr;
+    gap:40px;
+    align-items:start;
 }
 
-@media (max-width: 768px) {
-    .form-row {
-        flex-direction: column;
+.quote-left h2{
+    color:#ffbf00;
+    font-size:2.4rem;
+    margin-bottom:20px;
+}
+
+.contact-box{
+    margin-top:30px;
+    padding:25px;
+    background:#1c1c1c;
+    border-left:5px solid #ffbf00;
+}
+
+.quote-form{
+    background:#1b1b1b;
+    padding:35px;
+    border-radius:8px;
+    border:1px solid #333;
+}
+
+.row{
+    display:flex;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea{
+    width:100%;
+    background:#2b2b2b;
+    border:1px solid #444;
+    color:white;
+    padding:14px;
+    border-radius:5px;
+    margin-bottom:15px;
+}
+
+.quote-form button{
+    width:100%;
+    background:#ffbf00;
+    color:#111;
+    border:none;
+    padding:16px;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    border-radius:5px;
+    text-transform:uppercase;
+}
+
+.quote-form button:hover{
+    opacity:.9;
+}
+
+@media(max-width:768px){
+
+    .quote-section .container{
+        grid-template-columns:1fr;
+    }
+
+    .row{
+        flex-direction:column;
     }
 }
-<section class="contact-banner">
-    <h2>Need Immediate Assistance?</h2>
-    <p>Call Larry Mitchell directly for machinery and hydraulic repair service.</p>
+:root{
+    --steel-black:#111111;
+    --steel-gray:#222222;
+    --industrial-gray:#333333;
+    --equipment-yellow:#ffbf00;
+    --white:#ffffff;
+}
+.hero{
+    background:
+    linear-gradient(
+        rgba(0,0,0,.70),
+        rgba(0,0,0,.70)
+    ),
+    url('images/excavator-hero.jpg');
 
-    <a href="tel:6783604784" class="call-btn">
-        Call (678) 360-4784
-    </a>
-</section>
+    background-size:cover;
+    background-position:center;
+    color:white;
+    min-height:90vh;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:white;
+}
+
+.hero h1 span{
+    color:#ffbf00;
+}
